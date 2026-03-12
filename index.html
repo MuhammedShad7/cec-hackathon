@@ -94,3 +94,35 @@
     <div class="stat-box"><div class="stat-n">24/7</div><div class="stat-l">Always On</div></div>
   </div>
 </div></div>
+<!-- ============================== SOS PAGE ============================== -->
+<div class="page" id="page-sos"><div class="wrap">
+  <div class="page-hdr">
+    <div class="page-title">🆘 SOS & Safety Center</div>
+    <div class="page-sub">Tap the SOS button, use voice trigger, or call emergency services directly.</div>
+  </div>
+
+  <!-- Big SOS Button -->
+  <div class="big-sos-wrap">
+    <button class="big-sos-btn" onclick="triggerSOS('Manual Button')">
+      <div class="big-sos-icon">🆘</div>
+      <div class="big-sos-text">SOS</div>
+      <div class="big-sos-sub">Hold to Activate</div>
+    </button>
+    <div class="sos-hint">Or say "HELP" · "BACHAO" · "EMERGENCY"</div>
+  </div>
+
+  <!-- Voice SOS -->
+  <div class="voice-listener">
+    <div class="card-title" style="justify-content:center;margin-bottom:14px;"><span class="ctdot" style="color:var(--red);background:var(--red)"></span>Voice SOS Trigger</div>
+    <div class="mic-ring" id="micRing" onclick="toggleVoiceSOS()">🎙️</div>
+    <div class="voice-status" id="voiceStatus" style="color:var(--text3)">Tap mic to activate voice listening</div>
+    <div class="voice-transcript" id="voiceTranscript">Listening for trigger words shown below...</div>
+    <div class="trigger-words">
+      <span class="tw">HELP</span><span class="tw">BACHAO</span><span class="tw">EMERGENCY</span>
+      <span class="tw">SOS</span><span class="tw">DANGER</span><span class="tw">SAVE ME</span>
+      <span class="tw">HELP ME</span><span class="tw">MADAD KARO</span>
+    </div>
+    <button class="listen-btn start" id="listenBtn" onclick="toggleVoiceSOS()">🎙️ Start Voice Listening</button>
+  </div>
+
+  <div class="sos-grid">
