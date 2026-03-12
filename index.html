@@ -168,3 +168,24 @@
         </div>
       </div>
     </div>
+    <!-- Nearby Police Stations -->
+    <div class="g-card" style="grid-column:1/-1">
+      <div class="nps-header">
+        <div class="card-title" style="margin-bottom:0"><span class="ctdot" style="color:var(--red);background:var(--red)"></span>🚔 Nearest Police Stations — Direct Call</div>
+        <button class="nps-refresh" id="npsBtn" onclick="loadNearbyPolice()">🔄 Refresh</button>
+      </div>
+      <div class="nps-list" id="npsList">
+        <div class="nps-skeleton"><div class="nps-skel"></div><div class="nps-skel"></div><div class="nps-skel"></div></div>
+      </div>
+    </div>
+
+    <!-- Alert Log -->
+    <div class="g-card" style="grid-column:1/-1">
+      <div class="card-title" style="justify-content:space-between;flex-wrap:wrap;gap:6px;">
+        <div style="display:flex;align-items:center;gap:7px;"><span class="ctdot" style="color:var(--gold);background:var(--gold)"></span>Alert Log</div>
+        <button onclick="clearAlertLog()" style="font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--text3);background:none;border:1px solid var(--border);padding:3px 9px;border-radius:5px;cursor:pointer;letter-spacing:.5px;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--text3)'">CLEAR</button>
+      </div>
+      <div class="alert-log" id="alertLog"><div class="empty-state">No alerts sent yet. Stay safe! 💙</div></div>
+    </div>
+  </div>
+</div></div>
