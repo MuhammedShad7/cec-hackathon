@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0005">
+<meta name="description" content="VoiceGuard AI — Women Safety & Accessibility Platform">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="VoiceGuard">
+<meta name="application-name" content="VoiceGuard AI">
+<meta name="msapplication-TileColor" content="#ff1744">
+<link rel="manifest" id="pwaManifest" href="#">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23ff1744'/><text y='.9em' font-size='72' x='50%' text-anchor='middle'>🛡️</text></svg>">
+<title>VoiceGuard AI — Women Safety & Accessibility</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div id="toastContainer"></div>
+
+<!-- ======== LOADING OVERLAY ======== -->
+<div class="overlay" id="overlayLoad">
+  <div class="load-sos-text">SOS</div>
+  <div class="load-msg" id="loadMsg">Activating Alert...</div>
+  <div class="load-steps">
+    <div class="lstep" id="ls1">Getting your location</div>
+    <div class="lstep" id="ls2">Notifying emergency contacts</div>
+    <div class="lstep" id="ls3">Alerting emergency services</div>
+    <div class="lstep" id="ls4">Alert dispatched</div>
+  </div>
+  <div class="load-bar-wrap"><div class="load-bar" id="loadBar"></div></div>
+</div>
+
+<!-- ======== SOS MODAL ======== -->
+<div class="overlay" id="overlayModal" style="animation:alertFlash .5s ease;">
+  <div class="sos-modal-ring"><span>🆘</span><span>SOS</span></div>
+  <div class="sos-modal-title">ALERT ACTIVATED!</div>
+  <div class="sos-modal-status" id="sosStatus"></div>
+  <button class="sos-dismiss" onclick="dismissSOS()">✓ I am Safe — Dismiss Alert</button>
+</div>
+
+<!-- ======== HEADER ======== -->
+<header class="header">
+  <div class="logo" onclick="showPage('home')">
+    <div class="logo-shield">🛡️</div>
+    <span class="logo-name">Voice<span>Guard</span></span>
+    <span class="logo-badge">AI</span>
+  </div>
+  <div class="sdg-row">
+    <div class="sdg-pill">SDG 5</div>
+    <div class="sdg-pill">SDG 11</div>
+    <div class="sdg-pill">SDG 16</div>
+  </div>
+  <div class="status-pill">
+    <div class="live-dot" id="liveDot"></div>
+    <span id="liveText">System Active</span>
+  </div>
+</header>
