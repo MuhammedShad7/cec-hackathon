@@ -126,3 +126,45 @@
   </div>
 
   <div class="sos-grid">
+    <!-- Emergency Numbers -->
+    <div class="g-card">
+      <div class="card-title"><span class="ctdot" style="color:var(--red);background:var(--red)"></span>Emergency Services</div>
+      <div class="police-grid">
+        <button class="police-btn pb-police" onclick="callEmergency('100','Police')">
+          <div class="pb-icon">👮</div><div class="pb-num">100</div><div class="pb-lbl">Police</div>
+        </button>
+        <button class="police-btn pb-ambu" onclick="callEmergency('108','Ambulance')">
+          <div class="pb-icon">🚑</div><div class="pb-num">108</div><div class="pb-lbl">Ambulance</div>
+        </button>
+        <button class="police-btn pb-women" onclick="callEmergency('1091','Women Helpline')">
+          <div class="pb-icon">👩</div><div class="pb-num">1091</div><div class="pb-lbl">Women Helpline</div>
+        </button>
+        <button class="police-btn pb-emer" onclick="callEmergency('112','National Emergency')">
+          <div class="pb-icon">🆘</div><div class="pb-num">112</div><div class="pb-lbl">National Emergency</div>
+        </button>
+      </div>
+      <div class="divider"></div>
+      <div class="card-title"><span class="ctdot" style="color:var(--teal);background:var(--teal)"></span>Live Location</div>
+      <div class="loc-box" id="locBox"><div style="color:var(--text3)">📍 Tap button to get location...</div></div>
+      <button class="loc-btn" onclick="fetchLocation()">📍 Get My Location</button>
+    </div>
+
+    <!-- Emergency Contacts -->
+    <div class="g-card">
+      <div class="card-title">
+        <span class="ctdot" style="color:var(--rose);background:var(--rose)"></span>
+        Emergency Contacts
+        <span id="contactBadge" style="margin-left:4px;font-size:.62rem;background:var(--border2);padding:2px 7px;border-radius:10px;color:var(--text3);">0</span>
+      </div>
+      <div class="contacts-list" id="contactsList"><div class="empty-state">No contacts yet. Add below 👇</div></div>
+      <div class="divider"></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.57rem;color:var(--text3);letter-spacing:1px;margin-bottom:9px;">ADD CONTACT</div>
+      <div class="add-form">
+        <input class="mini-input" id="cName"  placeholder="Full Name" maxlength="30">
+        <input class="mini-input" id="cPhone" placeholder="+91 XXXXX XXXXX" maxlength="20">
+        <div class="add-form-row">
+          <input class="mini-input" id="cRel" placeholder="Relation (e.g. Mom)" maxlength="20">
+          <button class="add-btn" onclick="addContact()">+ Add</button>
+        </div>
+      </div>
+    </div>
